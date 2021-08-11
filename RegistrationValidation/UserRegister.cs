@@ -71,5 +71,22 @@ namespace RegistrationValidation
                 Console.WriteLine("Password is Not Valid");
             return Validation;
         }
+        /// <summary>
+        /// UC 6 Atleast one upper case
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool UpperCasePasswordValidation(string name)
+        {
+            string Password = "^[A-Za-z0-9!@#$%^&*]{7}[A-Z]{1}$";
+            Regex regex = new Regex(Password);
+            bool Validation = regex.IsMatch(name);
+            if (Validation)
+                Console.WriteLine("Password  is Valid");
+            else
+                Console.WriteLine("Password is Not Valid");
+            return Validation;
+        }
+
     }
 }
