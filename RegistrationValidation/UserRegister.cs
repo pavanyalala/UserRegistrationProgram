@@ -39,5 +39,16 @@ namespace RegistrationValidation
                 Console.WriteLine("Last Name is Not Valid");
             return Validation;
         }
+        public bool MobileValidation(string number)
+        {
+            String Number= "^[9][1][ ][6-9]{1}[0-9]{9}$";
+            Regex regex = new Regex(Number);
+            bool Validation = regex.IsMatch(number);
+            if (Validation)
+                Console.WriteLine("Phone Number  is Valid");
+            else
+                Console.WriteLine("Phone Number is Not Valid");
+            return Validation;
+        }
     }
 }
