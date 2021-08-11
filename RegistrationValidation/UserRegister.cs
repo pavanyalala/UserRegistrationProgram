@@ -39,15 +39,36 @@ namespace RegistrationValidation
                 Console.WriteLine("Last Name is Not Valid");
             return Validation;
         }
+        /// <summary>
+        /// UC-4 Mobile validation
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public bool MobileValidation(string number)
         {
-            String Number= "^[9][1][ ][6-9]{1}[0-9]{9}$";
+            string Number= "^[9][1][ ][6-9]{1}[0-9]{9}$";
             Regex regex = new Regex(Number);
             bool Validation = regex.IsMatch(number);
             if (Validation)
                 Console.WriteLine("Phone Number  is Valid");
             else
                 Console.WriteLine("Phone Number is Not Valid");
+            return Validation;
+        }
+        /// <summary>
+        /// UC-5 password validation
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool PasswordValidation(string name)
+        {
+            string Password = "^[A-Za-z0-9!@#$%^&*]{8}$";
+            Regex regex = new Regex(Password);
+            bool Validation = regex.IsMatch(name);
+            if (Validation)
+                Console.WriteLine("Password  is Valid");
+            else
+                Console.WriteLine("Password is Not Valid");
             return Validation;
         }
     }

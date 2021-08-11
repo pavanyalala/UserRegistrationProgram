@@ -12,7 +12,8 @@ namespace RegistrationValidation
                               "\n1.FirstName" +
                               "\n2.LastName" +
                               "\n3." +
-                              "\n4.Phone Number" 
+                              "\n4.Phone Number" +
+                              "\n5.Password " 
                               
                              );
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -30,6 +31,13 @@ namespace RegistrationValidation
                     bool val4 = userRegister.MobileValidation("91 9010073313");
                     Console.WriteLine(val4);
                     break;
+                case 5:
+                    bool val5 = userRegister.PasswordValidation("poij456%");
+                    Console.WriteLine(val5);
+                    break;
+
+
+
                
             }
             
