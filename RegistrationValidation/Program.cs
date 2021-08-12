@@ -11,7 +11,7 @@ namespace RegistrationValidation
             Console.WriteLine("Enter Choice" +
                               "\n1.FirstName" +
                               "\n2.LastName" +
-                              "\n3." +
+                              "\n3.Email Validation" +
                               "\n4.Phone Number" +
                               "\n5.Password " +
                               "\n6.Upper case password" +
@@ -28,6 +28,10 @@ namespace RegistrationValidation
                 case 2:
                     bool val2 = userRegister.LastNameValidation("Yalala");
                     Console.WriteLine(val2);
+                    break;
+                case 3:
+                    bool val3 = userRegister.EmailValidation("pavanyalala4508@gmail.com");
+                    Console.WriteLine(val3);
                     break;
                 case 4:
                     bool val4 = userRegister.MobileValidation("91 9010073313");

@@ -39,6 +39,17 @@ namespace RegistrationValidation
                 Console.WriteLine("Last Name is Not Valid");
             return Validation;
         }
+        public bool EmailValidation(string Email)
+        {
+            string Mail = "^[0-9a-zA-z]+[.+_-]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-z]{2,3}([.][a-zA-z]{2,3}){0,1}$";
+            Regex regex = new Regex(Mail);
+            bool Validation = regex.IsMatch(Email);
+            if (Validation)
+                Console.WriteLine("Last Name is Valid");
+            else
+                Console.WriteLine("Last Name is Not Valid");
+            return Validation;
+        }
         /// <summary>
         /// UC-4 Mobile validation
         /// </summary>
