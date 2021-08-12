@@ -14,7 +14,8 @@ namespace RegistrationValidation
                               "\n3." +
                               "\n4.Phone Number" +
                               "\n5.Password " +
-                              "\n6.Upper case password" 
+                              "\n6.Upper case password" +
+                              "\n7.Numeric password" 
                               
                              );
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -37,8 +38,12 @@ namespace RegistrationValidation
                     Console.WriteLine(val5);
                     break;
                 case 6:
-                    bool val6 = userRegister.PasswordValidation("pOij456%");
+                    bool val6 = userRegister.UpperCasePasswordValidation("gg45487S");
                     Console.WriteLine(val6);
+                    break;
+                case 7:
+                    bool val7 = userRegister.NumericPasswordValidation("hjhjhjA7");
+                    Console.WriteLine(val7);
                     break;
 
 
