@@ -39,6 +39,11 @@ namespace RegistrationValidation
                 Console.WriteLine("Last Name is Not Valid");
             return Validation;
         }
+        /// <summary>
+        /// Uc-3 Email validation
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <returns></returns>
         public bool EmailValidation(string Email)
         {
             string Mail = "^[0-9a-zA-z]+[.+_-]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-z]{2,3}([.][a-zA-z]{2,3}){0,1}$";
@@ -114,6 +119,16 @@ namespace RegistrationValidation
                 Console.WriteLine("Password is Not Valid");
             return Validation;
         }
-
+        public bool SpecialCharacterPasswordValidation(string name)
+        {
+            string Password = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}$";
+            Regex regex = new Regex(Password);
+            bool Validation = regex.IsMatch(name);
+            if (Validation)
+                Console.WriteLine("Password  is Valid");
+            else
+                Console.WriteLine("Password is Not Valid");
+            return Validation;
+        }
     }
 }

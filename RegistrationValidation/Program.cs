@@ -15,7 +15,8 @@ namespace RegistrationValidation
                               "\n4.Phone Number" +
                               "\n5.Password " +
                               "\n6.Upper case password" +
-                              "\n7.Numeric password" 
+                              "\n7.Numeric password" +
+                              "\n8.Valid All Mails"
                               
                              );
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -49,7 +50,11 @@ namespace RegistrationValidation
                     bool val7 = userRegister.NumericPasswordValidation("hjhjhjA7");
                     Console.WriteLine(val7);
                     break;
-
+                case 8:
+                    ValidAllEmails validAllEmails = new ValidAllEmails();
+                    validAllEmails.ValidEmail();
+                    break;
+                
 
 
 
