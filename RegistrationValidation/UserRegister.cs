@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace RegistrationValidation
 {
-    class UserRegister
+    public class UserRegister
     {
         readonly string FirstLastName = "^[A-Z]{1}[a-z]{2,}$";
 
