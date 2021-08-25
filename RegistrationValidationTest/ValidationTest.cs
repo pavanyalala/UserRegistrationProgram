@@ -97,6 +97,29 @@ namespace RegistrationValidationTest
             Assert.AreEqual(false, result);
             Assert.Pass();
         }
+        [Test]
+        [TestCase("abc-100@yahoo.com")]
+        [TestCase("abc@yahoo.com")]
+        [TestCase("abc.100@yahoo.com")]
+        [TestCase("abc111@abc.com")]
+        
+        public void GivenMultipleEmailIds_WhenValidated_ShouldReturnHappy(string email)
+        {
+            bool result = userRegister.EmailValidation(email);
+            Assert.AreEqual(true, result);
+            Assert.Pass();
+        }
+        [TestCase("abc-100")]
+        [TestCase("abch")]
+        [TestCase("@ya")]
+        [TestCase("a1")]
+
+        public void GivenMultipleEmailIds_WhenValidated_ShouldReturnSad(string email)
+        {
+            bool result = userRegister.EmailValidation(email);
+            Assert.AreEqual(false, result);
+            Assert.Pass();
+        }
 
     }
 }
